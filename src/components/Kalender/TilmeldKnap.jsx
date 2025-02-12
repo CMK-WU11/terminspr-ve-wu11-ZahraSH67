@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import IgangButton from "./IgangButton";
+import Button from "../ui/Button";
 import { useAuth } from "@/app/auth/context";
-import ToastBesked from "./ToastBesked";
+import ToastBesked from "../ui/ToastBesked";
 
 const TilmeldKnap = ({ aktivitet }) => {
   const { currentUser, token, setUserUpdated } = useAuth();
@@ -87,15 +87,13 @@ const TilmeldKnap = ({ aktivitet }) => {
   };
 
   return (
-    <div 
-    // className="absolute bottom-0 right-0 p-6.75"
-    >
+    <div className="absolute bottom-0 right-0 p-6.75">
       {!currentUser ? (
-        <IgangButton title="Log ind for tilmelding" onClick={handleLoginRedirect} />
+        <Button title="Log ind for tilmelding" onClick={handleLoginRedirect} />
       ) : isTilmeldt ? (
-        <IgangButton title="Forlad" onClick={fjernFraHold} />
+        <Button title="Forlad" onClick={fjernFraHold} />
       ) : (
-        <IgangButton title="Tilmeld" onClick={tilmeldHold} />
+        <Button title="Tilmeld" onClick={tilmeldHold} />
       )}
       {userbesked && <ToastBesked besked={userbesked} />}
     </div>

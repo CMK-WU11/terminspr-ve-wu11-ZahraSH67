@@ -5,9 +5,9 @@ import { useAuth } from "../auth/context";
 import { useRouter } from "next/navigation";
 import UserHold from "@/components/kalender/UserHold";
 import InstructorHold from "@/components/kalender/InstructorHold";
-import Heading from "@/components/Heading";
-import Footer from "@/components/Footer";
-import Loading from "@/components/Kalender/Loading";
+import Heading from "@/components/ui/Heading";
+import DrawerMenu from "@/components/navigation/DrawerMenu";
+import Loading from "@/components/ui/Loading";
 import { IoLogOutOutline } from "react-icons/io5";
 
 const Kalender = () => {
@@ -22,7 +22,8 @@ const Kalender = () => {
     } else {
       if (currentUser?.role == "default") {
         setShowUserHold(true);
-      } else {
+      } 
+      else {
         setShowInstructorHold(true);
       }
     }
@@ -30,7 +31,6 @@ const Kalender = () => {
 
   return (
     <div className="p-[28px] flex flex-col">
-    
       <div className="flex justify-between items-center mb-4">
         <Heading
           title="Kalender"
@@ -63,11 +63,16 @@ const Kalender = () => {
         >
           <InstructorHold user={currentUser} />
         </Suspense>
-      )}
+      )} 
 
-      <Footer />
+      <DrawerMenu />
     </div>
   );
 };
 
 export default Kalender;
+
+
+
+
+

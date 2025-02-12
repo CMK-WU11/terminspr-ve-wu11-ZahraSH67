@@ -1,4 +1,4 @@
-import Heading from "../Heading";
+import Heading from "@/components/ui/Heading";
 import { limitText } from "@/utils/textUtils";
 
 const KalenderCard = ({ aktivitet }) => {
@@ -26,3 +26,4 @@ const KalenderCard = ({ aktivitet }) => {
 };
 
 export default KalenderCard;
+

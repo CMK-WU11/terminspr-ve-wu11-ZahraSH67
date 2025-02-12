@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Footer(){
+export default function DrawerMenu(){
     return(
 
         <div className="fixed inset-x-0 bottom-0 bg-white shadow-lg bg-[#EAEAEA] border-none">

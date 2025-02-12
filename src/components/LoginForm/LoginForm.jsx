@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAuth } from "@/app/auth/context";
 import { useRouter } from "next/navigation";
-import ToastBesked from "./ToastBesked";
+import ToastBesked from "../ui/ToastBesked";
 
 const LoginForm = () => {
   const { login, loading } = useAuth();

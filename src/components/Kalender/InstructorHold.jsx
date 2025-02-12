@@ -1,45 +1,55 @@
-import KalenderCard from "./KalenderCard";
-import Link from "next/link";
-import IngenAktiviteter from "./IngenAktiviteter";
-import VisAktiviteter from "./VisAktiviteter";
+"use client";
 
+import { useEffect, useState } from "react";
+import IngenAktiviteter from "../ui/IngenAktiviteter";
+import VisAktiviteter from "../ui/VisAktiviteter";
+import Loading from "../ui/Loading"; // Assuming you have a loading component
 
-const getData = async (userId) => {
-  try {
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 1000);
-    });
+const InstructorHold = ({ user }) => {
+  const [aktiviteter, setAktiviteter] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const res = await fetch(`http://localhost:4000/api/v1/activities`);
-   
-    const alleAktiviteter = await res.json();
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulating delay
 
-    const filteredAktiviteter = alleAktiviteter.filter(
-      (aktivitet) => aktivitet.instructorId === userId
-    );
+        const res = await fetch(`http://localhost:4000/api/v1/activities`);
+        if (!res.ok) {
+          throw new Error("Netværksfejl ved hentning af data");
+        }
 
-    return filteredAktiviteter;
-  } catch (error) {
-    console.error("Fejl ved hentning af data:", error);
-    return [];
+        const alleAktiviteter = await res.json();
+        const filteredAktiviteter = alleAktiviteter.filter(
+          (aktivitet) => aktivitet.instructorId === user.id
+        );
+
+        setAktiviteter(filteredAktiviteter);
+      } catch (error) {
+        console.error("Fejl ved hentning af data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (user?.id) {
+      getData();
+    }
+  }, [user]);
+
+  if (loading) {
+    return <Loading loadingBesked="Henter instruktørens aktiviteter ..." />;
   }
-};
-
-const InstructorHold = async ({ user }) => {
-  const aktiviteter = await getData(user.id);
 
   return (
     <div>
-      {aktiviteter.length <= 0 ? (
+      {aktiviteter.length === 0 ? (
         <IngenAktiviteter />
       ) : (
         <VisAktiviteter data={aktiviteter} lnk={"/kalender"} />
       )}
     </div>
   );
-  s;
 };
 
 export default InstructorHold;
