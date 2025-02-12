@@ -14,13 +14,13 @@ export default function Footer(){
             </div>
           </Link>
 
-          <Link href="">
+          <Link href="/search">
             <div className="flex justify-center items-center w-10 h-10 rounded-full border  border-black">
                 <Image src="/search.png" width={60} height={60} alt="søg icon"  className="w-6 h-6"/>
             </div>
           </Link> 
 
-          <Link href="">
+          <Link href="/kalender">
             <div className="flex justify-center items-center w-10 h-10 rounded-full border border-black">
                 <Image src="/calendar.png" width={60} height={60} alt="kalender icon" className="w-6 h-6"/>
             </div>

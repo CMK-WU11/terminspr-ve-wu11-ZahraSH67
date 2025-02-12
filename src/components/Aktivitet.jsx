@@ -1,25 +1,12 @@
-// import { cookies } from "next/headers"
 import Image from "next/image"
 import Link from "next/link"
 
 
-export default async function Aktivitet({ aktivitet }) {
-	// const cookieStore = await cookies()
-	// const token = cookieStore.get("repe_token")
-	// const uid = cookieStore.get("repe_uid")
-
+export default function Aktivitet({ aktivitet }) {
 	return (
-
-	// 	<div>
-    //     <Image src={activitet.asset.url} height={150} width={150}alt="activity-pic" className="h-[25em] w-full rounded-l-lg rounded-tr-lg"  />
-	// 	<h2>{activitet.name}</h2>
-	// 	<p>{activitet.minAge}-{activitet.maxAge} år</p>
-    //   </div>
-
-
 	<>
 		<Link href={`/aktiviteter/${aktivitet.id}`}>
-			<article className="py-[1rem]">
+			<article className="py-[1rem] mb-[3rem]">
 			<section className="relative w-auto mx-auto h-[344px]">
 				{aktivitet.asset && aktivitet.asset.url && (
 				<Image
@@ -49,12 +36,7 @@ export default async function Aktivitet({ aktivitet }) {
 			</Link>
 
 		
-	</>
-
-		
-	
-
-	
+	</>	
 	)
 }
 

@@ -1,3 +1,4 @@
+//From Brians repetition code
 export async function serverFetch(url) {
 	try {
 		const response = await fetch(url)
@@ -6,3 +7,5 @@ export async function serverFetch(url) {
 		throw new Error(error)
 	}
 }
+
+  

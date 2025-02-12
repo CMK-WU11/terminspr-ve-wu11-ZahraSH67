@@ -1,7 +1,6 @@
-// import Image from "next/image";
 import Link from "next/link"
 import Image from "next/image"
-import HomeButton from "@/components/HomeButton"
+import IgangButton from "@/components/IgangButton"
 
 export default function Home(){
   return(   
@@ -13,7 +12,7 @@ export default function Home(){
       </div>
       <Link href="/aktiviteter">
         <div className="fixed bottom-0 left-0 right-0 mb-[54px] flex justify-center">
-         <HomeButton title="Kom i gang"/>
+         <IgangButton title="Kom i gang" animate={true} />
         </div>
       </Link>
     </div>
