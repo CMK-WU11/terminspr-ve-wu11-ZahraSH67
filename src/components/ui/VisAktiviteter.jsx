@@ -4,7 +4,7 @@ import KalenderCard from "../kalender/KalenderCard";
 
 const VisAktiviteter = ({ data, lnk }) => {
   return (
-    <div>
+    <div className="bg-[#EAEAEA] rounded-lg">
       <div>
         {data.map((aktivitet) => (
           <div key={aktivitet.id}>

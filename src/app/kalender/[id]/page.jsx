@@ -23,6 +23,7 @@ const hentDeltagere = async (aktivitetId, userId, token) => {
       throw new Error("Netværksfejl ved hentning af aktivitetsdata");
     }
     const aktivitetData = await response.json();
+    console.log("aktivitetData", aktivitetData)
     return aktivitetData;
   } catch (error) {
     console.error(error);

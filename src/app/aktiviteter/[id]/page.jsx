@@ -16,10 +16,10 @@ const AktivitetDetalje = async ({ params }) => {
   const aktivitetId = params.id;
 
   return (
-    <article className="pb-11">
+    <>
       <CardDetail id={aktivitetId} />
       <DrawerMenu />
-    </article>
+    </>
   );
 };
 

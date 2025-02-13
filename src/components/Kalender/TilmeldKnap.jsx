@@ -87,7 +87,9 @@ const TilmeldKnap = ({ aktivitet }) => {
   };
 
   return (
-    <div className="absolute bottom-0 right-0 p-6.75">
+    <div 
+    // className="absolute bottom-0 right-0 p-6.75"
+    >
       {!currentUser ? (
         <Button title="Log ind for tilmelding" onClick={handleLoginRedirect} />
       ) : isTilmeldt ? (

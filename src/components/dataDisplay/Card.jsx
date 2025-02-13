@@ -15,6 +15,7 @@ const getData = async (searchFilter) => {
   }
 
   const aktiviteter = await res.json();
+  console.log("aktiviteter:", aktiviteter)
 
   if (!searchFilter) return aktiviteter;
 

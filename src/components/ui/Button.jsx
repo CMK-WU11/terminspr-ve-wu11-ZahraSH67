@@ -21,7 +21,7 @@ const Button = ({ title, onClick, animate }) => {
     <motion.div {...animationProps}>
       <button
         disabled={isDisabled} // Brug isDisabled tilstand til at kontrollere om knappen er deaktiveret
-        className={`text-[#E5E5E5] font-normal py-2 px-4 rounded-lg w-[250px] text-lg ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`text-white py-2 px-4 rounded-lg w-[250px]  ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         style={{
           backgroundColor: "#5E2E53",
           borderRadius: "10px",

@@ -19,7 +19,9 @@ const Kalender = () => {
   useEffect(() => {
     if (!currentUser) {
       router.push("/login");
-    } else {
+    } 
+    else 
+    {
       if (currentUser?.role == "default") {
         setShowUserHold(true);
       } 
@@ -30,12 +32,12 @@ const Kalender = () => {
   }, [currentUser, router]);
 
   return (
-    <div className="p-[28px] flex flex-col">
+    <div className="p-[28px] flex flex-col bg-[#5E2E53] h-[1440px]">
       <div className="flex justify-between items-center mb-4">
         <Heading
           title="Kalender"
           fontSize="text-[36px]"
-          color="text-headingGray"
+          color="text-white"
         />
         {currentUser && (
           <button

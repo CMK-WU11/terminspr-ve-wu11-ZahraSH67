@@ -25,34 +25,39 @@ const CardDetail = async ({ id }) => {
   const aktivitetData = await getData({ id });
 
   return (
-    <div>
-      <section className="relative w-full mx-auto h-[489px] ">
+    <div className="bg-[#5E2E53]">
+
+
+      <section className="relative w-full mx-auto h-[489px]">
         <Image
           src={aktivitetData?.asset?.url}
           alt="Class"
           layout="fill"
           objectFit="cover"
         />
-        <TilmeldKnap aktivitet={aktivitetData}/>
+        <div className="absolute inset-x-0 bottom-[2em] flex justify-center"
+        >
+          <TilmeldKnap aktivitet={aktivitetData}/>
+        </div>
       </section>
       
-      <section className=" w-[335px] pt-4.5" style={{ margin: "0 auto" }}>
+      <section className=" w-[335px] p-[1.5rem] h-[400px]" style={{ margin: "0 auto" }}>
         <Heading
           title={aktivitetData.name}
-          fontSize="text-2xl"
-          color="text-headingGray"
+          fontSize="text-[24px]"
+          color="text-white"
         />
         <Heading
           title={`${aktivitetData.minAge}-${aktivitetData.maxAge} år`}
-          fontSize="text-lg"
-          color="text-headingGray"
+          fontSize="text-[24px]"
+          color="text-white"
         />
         <Heading
           title={`${aktivitetData.weekday} - ${aktivitetData.time} `}
-          fontSize="text-lg"
-          color="text-headingGray"
+          fontSize="text-[24px]"
+          color="text-white"
         />
-        <p>
+        <p className="text-white text-[18px]">
           {aktivitetData.description}
           Vores erfarne instruktører guider dig gennem spændende dansegenrer og
           hjælper dig med at udforske din lidenskab for bevægelse og musik. 

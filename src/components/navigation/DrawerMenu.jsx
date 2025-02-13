@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function DrawerMenu(){
     return(
 
-        <div className="fixed inset-x-0 bottom-0 bg-white shadow-lg bg-[#EAEAEA] border-none">
+        <div className="fixed inset-x-0 bottom-0 bg-[#EAEAEA] shadow-lg bg-[#EAEAEA] border-none">
         <div className="flex justify-around items-center h-16">
 
           <Link href="/aktiviteter">
