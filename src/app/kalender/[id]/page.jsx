@@ -31,7 +31,7 @@ const hentDeltagere = async (aktivitetId, userId, token) => {
   }
 };
 
-const HoldOversigt = ({ params }) => {
+export default function HoldOversigt({ params }) {
   const { currentUser, token } = useAuth();
   const router = useRouter();
 
@@ -73,4 +73,4 @@ const HoldOversigt = ({ params }) => {
   );
 };
 
-export default HoldOversigt;
+

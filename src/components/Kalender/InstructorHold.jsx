@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import IngenAktiviteter from "../ui/IngenAktiviteter";
 import VisAktiviteter from "../ui/VisAktiviteter";
-import Loading from "../ui/Loading"; // Assuming you have a loading component
+import Loading from "../ui/Loading"; // 
 
 const InstructorHold = ({ user }) => {
   const [aktiviteter, setAktiviteter] = useState([]);

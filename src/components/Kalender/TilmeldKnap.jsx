@@ -91,7 +91,7 @@ const TilmeldKnap = ({ aktivitet }) => {
     // className="absolute bottom-0 right-0 p-6.75"
     >
       {!currentUser ? (
-        <Button title="Log ind for tilmelding" onClick={handleLoginRedirect} />
+        <Button title="Tilmeld" onClick={handleLoginRedirect} />
       ) : isTilmeldt ? (
         <Button title="Forlad" onClick={fjernFraHold} />
       ) : (

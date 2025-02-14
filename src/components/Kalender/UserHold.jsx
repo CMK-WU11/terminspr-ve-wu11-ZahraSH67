@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import IngenAktiviteter from "../ui/IngenAktiviteter";
 import VisAktiviteter from "../ui/VisAktiviteter";
-import Loading from "../ui/Loading"; // Assuming you have a loading component
+import Loading from "../ui/Loading"; 
 
 const UserHold = ({ user }) => {
   const [activities, setActivities] = useState([]);
@@ -11,7 +11,6 @@ const UserHold = ({ user }) => {
 
   useEffect(() => {
     const fetchActivities = async () => {
-      // Simulating a delay (same as setTimeout in the original code)
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setActivities(user?.activities || []);

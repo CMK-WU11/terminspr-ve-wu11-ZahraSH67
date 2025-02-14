@@ -2,7 +2,6 @@ import Card from "@/components/dataDisplay/Card";
 import DrawerMenu from "@/components/navigation/DrawerMenu";
 import { Suspense } from "react";
 import Loading from "@/components/ui/Loading";
-// import StaticHeading from "@/components/ui/StaticHeading";
 import Heading from "@/components/ui/Heading";
 
 export const metadata = {

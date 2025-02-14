@@ -9,7 +9,7 @@ export default function Home (){
     <div className="bg-[url('/splash-image.jpg')]  
     w-screen h-screen bg-cover bg-center flex justify-center 
     items-center relative">
-       <div className="fixed top-[411px] left-0">
+       <div className="fixed top-[320px] left-0">
         <Image src="/logo.png" width={341} height={153} alt="logo"/>
       </div>
       <Link href="/aktiviteter">
